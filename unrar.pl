@@ -32,3 +32,5 @@ while (my $file = $dir->next) {
     }
 
 next } # End while loop
+
+exit 0;
