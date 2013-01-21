@@ -11,7 +11,7 @@ use File::chdir;
 #
 
 # Specify starting directory to search for files
-my $dir = dir('/home/highway/input/zzz_EXTRACT');
+my $dir = dir('/home/user/Input');
 
 $CWD = $dir;
 
@@ -27,7 +27,7 @@ while (my $file = $dir->next) {
     	local $CWD = $file;
 
     	# Execute bash program by calling script
-    	system("unrar e *.r01 ~/input");
+    	system("unrar e *.r01 /home/user/Output");
 
     }
 
