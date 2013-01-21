@@ -12,3 +12,5 @@ pkill -15 vlc
 sleep 10
 
 xset dpms force off
+
+exit
