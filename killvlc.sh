@@ -29,3 +29,5 @@ then
    xset dpms force off
 
 fi
+
+exit
