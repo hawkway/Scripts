@@ -4,8 +4,10 @@ use strict;
 
 use warnings;
 
+# install: $ sudo CPAN Path::Class
 use Path::Class;
 
+# install: $ sudo CPAN File::chdir
 use File::chdir;
 
 #
