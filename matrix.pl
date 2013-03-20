@@ -25,15 +25,11 @@ print "Name of first matrix? ";
 
 chomp($name[0] = <>);
 
-print "\n";
-
-print "Name of second matrix? ";
+print "\nName of second matrix? ";
 
 chomp($name[1] = <>);
 
-print "\n";
-
-print "Name of file to create? ";
+print "\nName of file to create? ";
 
 chomp(my $filename = <>);
 
