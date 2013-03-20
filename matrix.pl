@@ -8,6 +8,8 @@ use v5.14;
 
 my @name;
 
+my $filenameok;
+
 print "Name of first matrix? ";
 
 chomp($name[0] = <>);
@@ -20,7 +22,17 @@ print "Name of file to create? ";
 
 chomp(my $filename = <>);
 
-open FILE, ">", $filename or die $!;
+my $lngth = length($filename);
+
+my $crop = $lngth - 2;
+
+my $fnck = substr($filename, $crop);
+
+if (lc($fnck) eq ".m") { $filenameok = $filename; }
+
+else { $filenameok = $filename . ".m"; }
+
+open FILE, ">", $filenameok or die $!;
 
 for (my $k = 0; $k <= 1; $k++) {
 
@@ -48,10 +60,12 @@ print FILE $name[0] . " * " . $name[1] . "\n\nquit;";
 
 close(FILE);
 
-print "Matrix successfully written to file . . . :)";
+print "Matrix successfully written to file . . . :)\n";
 
-my $trunc = substr($filename, 0, -2);
+print "Running MATLAB . . .";
 
-my $var = "matlab -nodesktop -nojvm -r " . $trunc . " > matlab_output.txt";
+my $trunc = substr($filenameok, 0, -2);
 
-system($var);
+my $run = "matlab -nodesktop -nojvm -r " . $trunc . " > " . $trunc . "_output.txt";
+
+system($run);
