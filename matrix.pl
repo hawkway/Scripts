@@ -25,13 +25,19 @@ print "Name of first matrix? ";
 
 chomp($name[0] = <>);
 
+print "\n";
+
 print "Name of second matrix? ";
 
 chomp($name[1] = <>);
 
+print "\n";
+
 print "Name of file to create? ";
 
 chomp(my $filename = <>);
+
+print "\n";
 
 
 # verify filename extension
@@ -89,9 +95,9 @@ close(FILE);
 
 # echo status
 
-print "Matrix successfully written to file . . . :)\n";
+print "Matrix successfully written to file . . .\n\n";
 
-print "Running MATLAB . . .";
+print "Running MATLAB . . .\n";
 
 
 # create matlab code
