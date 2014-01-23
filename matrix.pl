@@ -70,13 +70,13 @@ for (my $k = 0; $k <= 1; $k++) { # total
 
 	    else { print FILE $num . ";\n"; }
 
-	}
+	} # end columns
 
-    }
+    } # end rows
 
     print FILE "]\n\n";
 
-}
+} # end for
 
 
 # add code to multiply
