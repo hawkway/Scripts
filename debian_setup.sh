@@ -16,8 +16,6 @@ wget https://raw.githubusercontent.com/hawkway/Configs/master/.emacs -O .emacs
 
 cp ~/.bashrc ~/dot_bashrc_old
 
-cp ~/.emacs ~/dot_emacs_old
-
 # replace old with new
 
 mv .bashrc ~/.bashrc
