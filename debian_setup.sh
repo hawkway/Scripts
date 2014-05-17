@@ -18,9 +18,9 @@ cp ~/.bashrc ~/dot_bashrc_old
 
 # replace old with new
 
-mv .bashrc ~/.bashrc
+cp .bashrc ~
 
-mv .emacs ~/.emacs
+cp .emacs ~
 
 # remove temp directory
 
