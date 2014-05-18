@@ -28,4 +28,6 @@ cd ~
 
 rm -rf ~/abc123def
 
+# exit cleanly
+
 exit
