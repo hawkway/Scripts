@@ -28,6 +28,10 @@ cd ~
 
 rm -rf ~/abc123def
 
+# reload bashrc
+
+source ~/.bashrc
+
 # exit cleanly
 
 exit
