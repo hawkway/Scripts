@@ -9,7 +9,7 @@
 #   DESCRIPTION: creates a new folder in ~/github with $1, and initializes it with github
 # 
 #       OPTIONS: ---
-#  REQUIREMENTS: bash, idk?
+#  REQUIREMENTS: create the repo online first, then run this script to initialize.
 #          BUGS: ---
 #         NOTES: ---
 #        AUTHOR: ---
