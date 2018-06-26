@@ -7,14 +7,16 @@
 // @grant       none
 // ==/UserScript==
 
+var darkThemeEnabled = false;
 var jQueryLoadMilliseconds = 500;
 var clickDelayMilliseconds = 100;
-var darkThemeEnabled = false;
 
+// create new script element
 var jq = document.createElement('script');
+// add jquery to contents of new element
 jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
+// insert jquery into head element to make life easier
 document.getElementsByTagName('head')[0].appendChild(jq);
-// ... give time for script to load
 
 function clickMenu()
 {
@@ -54,6 +56,7 @@ function startScript()
 {
     // already dark?
     checkTheme();
+    // check status of theme
     if (darkThemeEnabled === false)
         // turn off the lights
         toggleDarkTheme();
