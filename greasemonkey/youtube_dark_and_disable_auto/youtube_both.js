@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        youtube_dark
+// @name        youtube_both
 // @namespace   PeanutButterIsALuxury
-// @description auto-click the new dark theme menu
+// @description enable dark theme, and disable autoplay
 // @include     *.youtube.com/*
 // @version     1
 // @grant       none
@@ -54,6 +54,18 @@ function checkTheme()
     darkThemeEnabled = jQuery('html').css('background-color') === "rgb(19, 19, 19)";
 }
 
+function checkAutoplay()
+{
+    // get flag from element
+    var sAutoPlayEnabled = jQuery('paper-toggle-button#improved-toggle').attr('aria-pressed');
+    // check value
+    if (sAutoPlayEnabled === "true")
+    {
+        // click the button
+        jQuery('paper-toggle-button#improved-toggle div.toggle-container div#toggleButton').trigger("click");
+    }
+}
+
 function startScript()
 {
     // already dark?
@@ -64,6 +76,8 @@ function startScript()
         // turn off the lights
         toggleDarkTheme();
     }
+    // check autoplay
+    checkAutoplay();
 }
 
 // start here
